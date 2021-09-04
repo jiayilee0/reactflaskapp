@@ -11,6 +11,6 @@ app = Flask(__name__)
 def list_questions():
     combine("Hello, get this from the user input! It should be a long and annoying passage.")
     decode_extractions()
-    with open('/backendfiles/questions', 'r') as f:
+    with open('questions.txt', 'r') as f:
         questions = f.read().splitlines()
     return {'qnlist': questions}
