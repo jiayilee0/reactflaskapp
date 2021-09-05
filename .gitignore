@@ -26,3 +26,7 @@ yarn-error.log*
 
 # large model file
 api/model.10.bin
+
+# outputs
+api/keywords.txt
+api/questions.txt
