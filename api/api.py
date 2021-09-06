@@ -1,5 +1,5 @@
-import time
-from flask import Flask
+import json
+from flask import Flask, request
 from extract import combine
 from decode_seq2seq import decode_extractions
 
@@ -7,9 +7,10 @@ from decode_seq2seq import decode_extractions
 app = Flask(__name__)
 
 
-@app.route('/questions')
+@app.route('/questions'), methods=['POST'])
 def list_questions():
-    combine("Hello, get this from the user input! It should be a long and annoying passage.")
+    input = request.get_json()
+    combine(input['passage'])
     decode_extractions()
     with open('questions.txt', 'r') as f:
         questions = f.read().splitlines()
