@@ -66,7 +66,7 @@ def writefile(model_input):
   return None
 
 
-def combine(passage):
+def get_keywords(passage):
   keywords = get_extraction(passage)
   model_input = modify_extraction(passage, keywords)
   writefile(model_input)

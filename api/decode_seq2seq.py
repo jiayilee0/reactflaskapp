@@ -223,5 +223,5 @@ def main():
                     pickle.dump(x, fout_trace)
 
 
-def decode_extractions():
+def get_questions():
     main()
