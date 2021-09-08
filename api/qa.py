@@ -1,8 +1,8 @@
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 import torch
 
-tokenizer = AutoTokenizer.from_pretrained("deepset/bert-large-uncased-whole-word-masking-squad2")
-model = AutoModelForQuestionAnswering.from_pretrained("deepset/bert-large-uncased-whole-word-masking-squad2", return_dict=False)
+tokenizer = AutoTokenizer.from_pretrained("ahotrod/electra_large_discriminator_squad2_512")
+model = AutoModelForQuestionAnswering.from_pretrained("ahotrod/electra_large_discriminator_squad2_512", return_dict=False)
 
 
 def get_answers(text):
